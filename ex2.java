@@ -16,32 +16,22 @@ public class ex2 {
         Scanner sc = new Scanner(System.in);
 
         double salario = 0.0;
-        boolean validacao = true;
 
-        System.out.print("Digite o seu salário : ");
-        salario = Double.parseDouble(sc.nextLine());
+        do{
+            System.out.print("Digite o seu salário : ");
+            salario = Double.parseDouble(sc.nextLine());
 
-        
-        if(salario > 1997.58 && salario < 5399.99){
-            System.out.print("Salário maior que R$ 1997.58.");
-        } else if(salario > 5399.99){
-            System.out.print("Salário maior que R$ 5399.99.");
-        } else if (salario <= 0 ){
-            do{
+            if(salario > 1997.58 && salario < 5399.99){
+                System.out.print("Salário maior que R$ 1997.58.");
+            } else if(salario > 5399.99){
+                System.out.print("Salário maior que R$ 5399.99.");
+            } else if (salario <= 0 ){
                 System.out.print("O salário precisa ser maior que 0 : \n");
-                System.out.print("Digite o seu salário : ");
-                salario = Double.parseDouble(sc.nextLine());
-                validacao = false;
-            }while(!validacao);
-        }
-       /* do{
-            if(salario <= 0 ){
-                System.out.print("O salário precisa ser maior que 0 : \n");
-                System.out.print("Digite o seu salário : ");
-                salario = Double.parseDouble(sc.nextLine());
-                validacao = false;
+                
             }
-        }while(!validacao)*/
+        }while(salario <= 0);
+
+       
         
     }
 }
